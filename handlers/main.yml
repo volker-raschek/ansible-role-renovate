@@ -1,0 +1,8 @@
+---
+
+- name: enable renovate
+  systemd:
+    name: "renovate.timer"
+    state: started
+    enabled: true
+    daemon_reload: true

@@ -1,0 +1,10 @@
+#jinja2: lstrip_blocks: "True", trim_blocks: "True"
+{
+{% for key, value in renovate_config.items() %}
+  {% if value | bool %}
+  "{{ key }}": {{ value | lower }},
+  {% else %}
+  "{{ key }}": "{{ value }}",
+  {% endif %}
+{% endfor %}
+}

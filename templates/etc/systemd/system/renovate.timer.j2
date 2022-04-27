@@ -1,0 +1,15 @@
+#
+# {{ ansible_managed }}
+#
+
+[Unit]
+Description=Timer to start renovate periodically
+
+[Timer]
+OnCalendar={{ renovate_systemd_timer_oncalendar }}
+Persistent=true
+RandomizedDelaySec=0
+WakeSystem=false
+
+[Install]
+WantedBy=multi-user.target

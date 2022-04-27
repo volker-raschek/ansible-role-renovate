@@ -1,0 +1,16 @@
+#
+# {{ ansible_managed }}
+#
+
+[Unit]
+Description=Service to start renovate
+Requires=docker.service network-online.target
+After=docker.service network-online.target
+{% if renovate_systemd_status_email %}
+OnFailure=status-email@%n.service
+{% endif %}
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/docker-compose up
+WorkingDirectory={{ renovate_dir }}

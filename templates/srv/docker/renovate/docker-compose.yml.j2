@@ -1,0 +1,16 @@
+#jinja2: lstrip_blocks: "True", trim_blocks: "True"
+version: '3'
+services:
+  renovate:
+    environment:
+      RENOVATE_CONFIG_FILE: /usr/src/app/config.json
+{% for key, value in renovate_container_environment.items() %}
+      {{ key | upper }}: {{ value | quote }}
+{% endfor %}
+    image: {{ renovate_container_image }}
+    user: {{ renovate_container_user | default('1000:977') }}
+    volumes:
+    - ./config.json:/usr/src/app/config.json
+    - /etc/localtime:/etc/localtime:ro
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /tmp:/tmp:rw
