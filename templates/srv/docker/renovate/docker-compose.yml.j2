@@ -4,9 +4,11 @@ services:
   renovate:
     environment:
       RENOVATE_CONFIG_FILE: /usr/src/app/config.json
+{% if renovate_container_environment is defined and renovate_container_environment | length > 0 %}
 {% for key, value in renovate_container_environment.items() %}
       {{ key | upper }}: {{ value | quote }}
 {% endfor %}
+{% endif %}
     image: {{ renovate_container_image }}
     user: {{ renovate_container_user | default('1000:977') }}
     volumes:

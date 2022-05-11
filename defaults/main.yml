@@ -10,6 +10,8 @@ renovate_config: []
 
 renovate_dir: /srv/docker/renovate
 
+renovate_docker_compose_bin: /usr/bin/docker-compose
+
 renovate_container_environment: []
   # GITHUB_COM_TOKEN: ""
   # NODE_TLS_REJECT: ""

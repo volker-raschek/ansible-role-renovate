@@ -12,5 +12,5 @@ OnFailure=status-email@%n.service
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/docker-compose up
+ExecStart={{ renovate_docker_compose_bin }} up
 WorkingDirectory={{ renovate_dir }}
