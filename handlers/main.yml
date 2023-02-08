@@ -1,7 +1,7 @@
 ---
 
 - name: enable renovate
-  systemd:
+  ansible.builtin.systemd:
     name: "renovate.timer"
     state: started
     enabled: true
