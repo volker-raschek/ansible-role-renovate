@@ -13,6 +13,5 @@ OnFailure=status-email@%n.service
 [Service]
 Type=simple
 ExecStart={{ renovate_docker_compose_bin }} up
-ExecStartPost={{ renovate_docker_compose_bin }} down --volumes
 ExecStop={{ renovate_docker_compose_bin }} down --volumes
 WorkingDirectory={{ renovate_dir }}
