@@ -31,4 +31,4 @@
   - etc/systemd/system/renovate.service
   - etc/systemd/system/renovate.timer
   notify:
-  - enable renovate
+  - Enable renovate

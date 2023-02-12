@@ -1,6 +1,6 @@
 ---
 
-- name: enable renovate
+- name: Enable renovate
   ansible.builtin.systemd:
     name: "renovate.timer"
     state: started
