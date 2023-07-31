@@ -1,7 +1,8 @@
 ---
 
-renovate_config: []
+renovate_config:
   # autodiscover: true
+  cacheDir: "{{ renovate_cache_dir }}"
   # endpoint: ""
   # logFile: ""
   # logFileLevel: ""
@@ -11,6 +12,8 @@ renovate_config: []
 renovate_dir: /srv/docker/renovate
 
 renovate_docker_compose_bin: /usr/bin/docker-compose
+
+renovate_cache_dir: /tmp/renovate/cache
 
 renovate_container_environment: []
   # GITHUB_COM_TOKEN: ""
