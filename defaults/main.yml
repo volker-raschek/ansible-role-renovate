@@ -19,9 +19,9 @@ renovate_container_environment: []
   # GITHUB_COM_TOKEN: ""
   # NODE_TLS_REJECT: ""
 
-renovate_container_image: docker.io/renovate/renovate:32.22.0-slim
+renovate_container_image: docker.io/renovate/renovate:36.71.0-slim
 renovate_container_user: 1000:977
 
 renovate_systemd_dir: /etc/systemd/system
 renovate_systemd_status_email: false
-renovate_systemd_timer_oncalendar: "*-*-* *:0/10:00"
+renovate_systemd_timer_oncalendar: "*-*-* *:0/15:00"
