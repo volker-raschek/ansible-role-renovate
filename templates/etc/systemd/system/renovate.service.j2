@@ -12,7 +12,5 @@ OnFailure=status-email@%n.service
 
 [Service]
 Type=simple
-ExecStart={{ renovate_docker_compose_bin }} up
-ExecStop={{ renovate_docker_compose_bin }} down --volumes
-ExecPostStop=/bin/rm --recursive --force {{ renovate_cache_dir }}
-WorkingDirectory={{ renovate_dir }}
+ExecStart=/usr/local/bin/start-renovate.sh
+ExecStop=/usr/local/bin/stop-renovate.sh

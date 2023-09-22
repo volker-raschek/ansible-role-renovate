@@ -20,6 +20,17 @@
   - srv/docker/renovate/docker-compose.yml
   - srv/docker/renovate/config.json
 
+- name: Create start and stop scripts
+  ansible.builtin.template:
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    owner: root
+    group: docker
+    mode: "0770"
+  with_items:
+  - usr/local/bin/start-renovate.sh
+  - usr/local/bin/stop-renovate.sh
+
 - name: Create systemd unit files
   ansible.builtin.template:
     src: "{{ item }}.j2"

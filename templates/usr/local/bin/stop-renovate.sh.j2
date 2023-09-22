@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#
+# {{ ansible_managed }}
+#
+
+set -e
+
+{{ renovate_docker_compose_bin }} --project-directory {{ renovate_dir }} down
+rm --force --recursive {{ renovate_cache_dir }}
