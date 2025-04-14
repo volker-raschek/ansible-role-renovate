@@ -1,4 +1,5 @@
 galaxy_info:
+  namespace: volker_raschek
   role_name: renovate
   author: Markus Pesch
   description: Role to configure renovate as container image
