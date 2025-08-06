@@ -1,25 +1,24 @@
+dependencies: []
 galaxy_info:
-  role_name: renovate
   author: Markus Pesch
-  description: Role to configure renovate as container image
   company: Cryptic Systems
+  description: Role to configure renovate as container image
+  galaxy_tags:
+    - renovate
   license: MIT
   min_ansible_version: "2.9"
+  namespace: volker-raschek
   platforms:
-  - name: ArchLinux
-    versions:
-    - all
-  - name: EL
-    versions:
-    - all
-  - name: Fedora
-    versions:
-    - all
-  - name: Ubuntu
-    versions:
-    - all
-
-  galaxy_tags:
-  - renovate
-
-dependencies: []
+    - name: ArchLinux
+      versions:
+        - all
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+  role_name: renovate
