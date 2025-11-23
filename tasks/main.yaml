@@ -17,7 +17,7 @@
     group: docker
     mode: "0664"
   with_items:
-  - srv/docker/renovate/docker-compose.yml
+  - srv/docker/renovate/docker-compose.yaml
   - srv/docker/renovate/config.json
 
 - name: Create start and stop scripts

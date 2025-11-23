@@ -14,7 +14,7 @@ Renovate will be periodically started by systemd.
 
 ## Features
 
-- Configuring docker-compose.yml and the config.json
+- Configuring docker-compose.yaml and the config.json
 - Configuring systemd service and timer unit
 
 ## Configuring
